@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+
+  <head>
+    {{ partial "head-meta.html" . }}
+
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    <link href="{{ .Site.BaseURL }}css/tufte.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}css/latex.css" rel="stylesheet">
+
+    {{ if .RSSLink }}
+    {{ "<!-- RSS 2.0 feed -->" | safeHTML }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ .Site.Title | safeHTML }}</h1>
+      {{ if .Site.Params.description }}<p class="subtitle">{{ .Site.Params.description | markdownify }}</p>{{ end }}
+    </header>
+
+    {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+  </body>
+
+</html>
+
+{{- /* vim: set ts=2 sw=2 et: */}}
