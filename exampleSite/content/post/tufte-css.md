@@ -118,15 +118,15 @@ Figures should try to use the `figure` element, which by default are constrained
 
 <figure>
 <label for="mn-exports-imports" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-exports-imports" class="margin-toggle"/><span class="marginnote">From Edward Tufte, <em>Visual Display of Quantitative Information</em>, page 92.</span>
-<img src="/img/exports-imports.png" alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780" />
+<img src="/hugo-theme-tufte-css/img/exports-imports.png" alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780" />
 </figure>
 
-<label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="/img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a `p` tag, as seen to the right of this paragraph.
+<label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="/hugo-theme-tufte-css/img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a `p` tag, as seen to the right of this paragraph.
 
 If you need a full-width figure, give it the `fullwidth` class. Make sure that’s inside an `article`, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From <em>Beautiful Evidence</em>, page 122-124.
 
 <figure class="fullwidth">
-<img src="/img/napoleons-march.png" alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813" />
+<img src="/hugo-theme-tufte-css/img/napoleons-march.png" alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813" />
 </figure>
 
 ## Code
@@ -157,11 +157,11 @@ Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href="http:
 
 This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:
 
-<figure class="fullwidth"><img src="/img/imagequilt-chinese-calligraphy.png" alt="Image of Chinese Calligraphy"/></figure>
+<figure class="fullwidth"><img src="/hugo-theme-tufte-css/img/imagequilt-chinese-calligraphy.png" alt="Image of Chinese Calligraphy"/></figure>
 
 Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.
 
-<figure><img src="/img/imagequilt-animal-sounds.png" alt="Image of animal sounds"/></figure>
+<figure><img src="/hugo-theme-tufte-css/img/imagequilt-animal-sounds.png" alt="Image of animal sounds"/></figure>
 
 ## Epilogue
 Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.
