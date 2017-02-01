@@ -1,0 +1,38 @@
+# Hugo variables
+#
+baseurl = "https://example.org/"
+languageCode = "en-us"
+title = "Hugo Tufte CSS"
+theme = "hugo-theme-tufte-css"
+# number of posts to show on home/category/tag pages (Default: 10)
+paginate = 5
+# optionally override the site's footer with custom copyright text
+# copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
+#googleAnalytics = "UA-123-45"
+#disqusShortname = "XYW"
+
+[permalinks]
+  post = "/:year/:month/:title/"
+  page = "/:slug/"
+
+# Theme variables
+#
+[params]
+  # Site author
+  author = "Your Name"
+
+  # Description/subtitle for homepage (can be Markdown)
+  description = "A simple Hugo theme based on the [Tufte CSS](https://github.com/edwardtufte/tufte-css/) style."
+
+  # Format dates with Go's time formatting
+  date_format = "Mon Jan 02, 2006"
+
+# Default content language for Hugo 0.17's multilingual support (default is "en")
+# See: https://github.com/spf13/hugo/blob/master/docs/content/content/multilingual.md
+#DefaultContentLanguage = "en"
+
+# Languages to render
+#[languages.en]
+#[languages.bg]
+
+# vim: ts=2 sw=2 et
