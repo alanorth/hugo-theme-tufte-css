@@ -1,6 +1,6 @@
 # Hugo variables
 #
-baseurl = "https://alanorth.github.io/hugo-theme-tufte-css"
+baseurl = "https://alanorth.github.io/hugo-theme-tufte-css/"
 languageCode = "en-us"
 title = "Hugo Tufte CSS"
 theme = "hugo-theme-tufte-css"
