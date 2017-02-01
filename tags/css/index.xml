@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Hugo Tufte CSS</title>
+    <link>https://alanorth.github.io/hugo-theme-tufte-css/tags/css/index.xml</link>
+    <description>Recent content in Css on Hugo Tufte CSS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://alanorth.github.io/hugo-theme-tufte-css/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tufte CSS is for Lovers</title>
+      <link>https://alanorth.github.io/hugo-theme-tufte-css/2017/02/tufte-css-is-for-lovers/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://alanorth.github.io/hugo-theme-tufte-css/2017/02/tufte-css-is-for-lovers/</guid>
+      <description>
+
+&lt;p&gt;Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.&lt;/p&gt;
+
+&lt;p&gt;Tufte CSS was created by &lt;a href=&#34;http://www.daveliepmann.com&#34;&gt;Dave Liepmann&lt;/a&gt; and is now an Edward Tufte project. The original idea was cribbed from &lt;a href=&#34;https://tufte-latex.github.io/tufte-latex/&#34;&gt;Tufte-&lt;span class=&#34;latex&#34;&gt;L&lt;span class=&#34;latex-sup&#34;&gt;a&lt;/span&gt;T&lt;span class=&#34;latex-sub&#34;&gt;e&lt;/span&gt;X&lt;/span&gt;&lt;/a&gt; and &lt;a href=&#34;http://rmarkdown.rstudio.com/tufte_handout_format.html&#34;&gt;R Markdown’s Tufte Handout format&lt;/a&gt;. We give hearty thanks to all the people who have contributed to those projects.&lt;/p&gt;
+
+&lt;p&gt;If you see anything that Tufte CSS could improve, we welcome your contribution in the form of an issue or pull request on the GitHub project: &lt;a href=&#34;https://github.com/edwardtufte/tufte-css&#34;&gt;tufte-css&lt;/a&gt;. Please note the &lt;a href=&#34;https://github.com/edwardtufte/tufte-css#contributing&#34;&gt;contribution guidelines&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, a reminder about the goal of this project. The web is not print. Webpages are not books. Therefore, the goal of Tufte CSS is not to say “websites should look like this interpretation of Tufte’s books” but rather “here are some techniques Tufte developed that we’ve found useful in print; maybe you can find a way to make them useful on the web”. Tufte CSS is merely a sketch of one way to implement this particular set of ideas. It should be a starting point, not a design goal, because any project should present their information as best suits their particular circumstances.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;To use Tufte CSS, copy &lt;code&gt;tufte.css&lt;/code&gt; and the &lt;code&gt;et-book&lt;/code&gt; directory of font files to your project directory, then add the following to your HTML document’s &lt;code&gt;head&lt;/code&gt; block:&lt;/p&gt;
+
+&lt;pre&gt;&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;tufte.css&#34;/&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.&lt;/p&gt;
+
+&lt;h2 id=&#34;fundamentals&#34;&gt;Fundamentals&lt;/h2&gt;
+
+&lt;h3 id=&#34;sections-and-headings&#34;&gt;Sections and Headings&lt;/h3&gt;
+
+&lt;p&gt;Organize your document with an &lt;code&gt;article&lt;/code&gt; element inside your &lt;code&gt;body&lt;/code&gt; tag. Inside that, use &lt;code&gt;section&lt;/code&gt; tags around each logical grouping of text and headings.&lt;/p&gt;
+
+&lt;p&gt;Tufte CSS uses &lt;code&gt;h1&lt;/code&gt; for the document title, &lt;code&gt;p&lt;/code&gt; with class &lt;code&gt;subtitle&lt;/code&gt; for the document subtitle, &lt;code&gt;h2&lt;/code&gt; for section headings, and &lt;code&gt;h3&lt;/code&gt; for low-level headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:&lt;/p&gt;
+
+&lt;blockquote cite=&#34;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB&#34;&gt;
+&lt;p&gt;
+[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of &lt;em&gt;sentences&lt;/em&gt; which then cumulate sequentially into &lt;em&gt;paragraphs&lt;/em&gt;, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
+&lt;/p&gt;
+&lt;footer&gt;&lt;a href=&#34;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB&#34;&gt;Edward Tufte, forum post, ‘Book design: advice and examples’ thread&lt;/a&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As a bonus, this excerpt regarding the use of headings provides an example of block quotes. In Tufte CSS they are just lightly styled, semantically correct HTML using &lt;code&gt;blockquote&lt;/code&gt; and &lt;code&gt;footer&lt;/code&gt; elements. See page 20 of &lt;a href=&#34;https://www.edwardtufte.com/tufte/books_vdqi&#34;&gt;The Visual Display of Quantitative Information&lt;/a&gt; for an example in print.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;In his later books&lt;label for=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;&lt;/label&gt;&lt;/span&gt;&lt;input type=&#34;checkbox&#34; id=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;sidenote&#34;&gt;&lt;a href=&#34;http://www.edwardtufte.com/tufte/books_be&#34;&gt;&lt;em&gt;Beautiful Evidence&lt;/em&gt;&lt;/a&gt;&lt;/span&gt;, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class &lt;code&gt;newthought&lt;/code&gt;, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through &lt;code&gt;&amp;amp;lt;section&amp;amp;gt;&lt;/code&gt; tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the &lt;code&gt;newthought&lt;/code&gt; technique. Pick one approach and stick to it.&lt;/p&gt;
+
+&lt;h3 id=&#34;text&#34;&gt;Text&lt;/h3&gt;
+
+&lt;p&gt;Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. Tufte CSS uses &lt;code&gt;#fffff8&lt;/code&gt; and &lt;code&gt;#111111&lt;/code&gt; because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. We stick to the greyscale for text, reserving color for specific, careful use in figures and images.&lt;/p&gt;
+
+&lt;p&gt;In print, Tufte has used the proprietary Monotype Bembo&lt;label for=&#34;sn-proprietary-monotype-bembo&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;&lt;/label&gt;&lt;input type=&#34;checkbox&#34; id=&#34;sn-proprietary-monotype-bembo&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;sidenote&#34;&gt;See Tufte’s comment in the &lt;a href=&#34;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt&#34;&gt;Tufte book fonts&lt;/a&gt; thread.&lt;/span&gt; font. A similar effect is achieved in digital formats with the now open-source &lt;a href=&#34;https://github.com/edwardtufte/et-book&#34;&gt;ETBook&lt;/a&gt;, which Tufte CSS supplies with a &lt;code&gt;@font-face&lt;/code&gt; reference to a .ttf file. In case ETBook somehow doesn’t work, Tufte CSS shifts gracefully to other serif fonts like Palatino and Georgia.&lt;/p&gt;
+
+&lt;p&gt;Also notice how Tufte CSS includes separate font files for bold (strong) and italic (emphasis), instead of relying on the browser to mechanically transform the text. This is typographic best practice.&lt;/p&gt;
+
+&lt;p&gt;&lt;p class=&#34;sans&#34;&gt;If you prefer sans-serifs, use the &lt;code&gt;sans&lt;/code&gt; class. It relies on Gill Sans, Tufte’s sans-serif font of choice.&lt;/p&gt;
+
+&lt;p&gt;Links in Tufte CSS match the body text in color and do not change on mouseover or when clicked. Here is a &lt;a href=&#34;#&#34;&gt;dummy example&lt;/a&gt; that goes nowhere. These links are underlined, since this is the most widely recognized indicator of clickable text. &lt;label for=&#34;mn-blue-links&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&#34;checkbox&#34; id=&#34;mn-blue-links&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;marginnote&#34;&gt;Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.&lt;/span&gt; However, because most browsers’ default underlining does not clear descenders and is so thick and distracting, the underline effect is instead achieved using CSS trickery involving background gradients instead of standard &lt;code&gt;text-decoration&lt;/code&gt;. Credit goes to Adam Schwartz for that technique.&lt;/p&gt;
+
+&lt;p&gt;As always, these design choices are merely one approach that Tufte CSS provides by default. Other approaches, such as changing color on click or mouseover, or using highlighting or color instead of underlining to denote links, could also be made to work. The goal is to make sentences readable without interference from links, as well as to make links immediately identifiable even by casual web users.&lt;/p&gt;
+
+&lt;h2 id=&#34;epigraphs&#34;&gt;Epigraphs&lt;/h2&gt;
+
+&lt;div class=&#34;epigraph&#34;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.&lt;/p&gt;
+&lt;footer&gt;George Orwell, “Politics and the English Language”&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.&lt;/p&gt;
+&lt;footer&gt;Richard P. Feynman, &lt;cite&gt;“What Do You Care What Other People Think?”&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;I do not paint things, I paint only the differences between things.&lt;footer&gt;Henri Matisse, &lt;cite&gt;Henri Matisse Dessins: thèmes et variations&lt;/cite&gt; (Paris, 1943), 37&lt;/footer&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly &lt;em&gt;Beautiful Evidence&lt;/em&gt;), these are &lt;code&gt;blockquote&lt;/code&gt; elements with a bit of specialized styling. Quoted text is italicized. The source goes in a &lt;code&gt;footer&lt;/code&gt; element inside the &lt;code&gt;blockquote&lt;/code&gt;. We have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.&lt;/p&gt;
+
+&lt;h2 id=&#34;sidenotes-footnotes-and-marginal-notes-h2&#34;&gt;Sidenotes: Footnotes and Marginal Notes&lt;/h2&gt;&lt;/h2&gt;
+
+&lt;p&gt;One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.&lt;label for=&#34;sn-extensive-use-of-sidenotes&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;&lt;/label&gt;&lt;input type=&#34;checkbox&#34; id=&#34;sn-extensive-use-of-sidenotes&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;sidenote&#34;&gt;This is a sidenote.&lt;/span&gt; Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.&lt;/p&gt;
+
+&lt;p&gt;Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations &lt;em&gt;as close as possible&lt;/em&gt; to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.&lt;/p&gt;
+
+&lt;p&gt;Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34;&gt;
+&amp;lt;label for=&#34;sn-demo&#34;
+class=&#34;margin-toggle sidenote-number&#34;&amp;gt;
+&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34;
+id=&#34;sn-demo&#34;
+class=&#34;margin-toggle&#34;/&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;You must manually assign a reference &lt;code&gt;id&lt;/code&gt; to each side or margin note, replacing “sn-demo” in the &lt;code&gt;for&lt;/code&gt; and the &lt;code&gt;id&lt;/code&gt; attribute values with an appropriate descriptor. It is useful to use prefixes like &lt;code&gt;sn-&lt;/code&gt; for sidenotes and &lt;code&gt;mn-&lt;/code&gt; for margin notes.&lt;/p&gt;
+
+&lt;p&gt;Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a &lt;code&gt;span&lt;/code&gt; with class &lt;code&gt;sidenote&lt;/code&gt;. This tag is also inserted directly in the middle of the body text, but is either pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.&lt;/p&gt;
+
+&lt;p&gt;If you want a sidenote without footnote-style numberings, then you want a margin note.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#34;mn-demo&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-demo&#34; class=&#34;margin-toggle&#34;/&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+This is a margin note. Notice there isn’t a number preceding the note.
+&lt;/span&gt; On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol &amp;#8853; (&lt;code&gt;&amp;amp;amp;#8853;&lt;/code&gt;), but it’s up to you.&lt;/p&gt;
+
+&lt;p&gt;Margin notes are created just like sidenotes, but with the &lt;code&gt;marginnote&lt;/code&gt; class for the content and the &lt;code&gt;margin-toggle&lt;/code&gt; class for the label and dummy checkbox. For instance, here is the code for the margin note used in the previous paragraph:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34;&gt;
+&amp;lt;label for=&#34;mn-demo&#34; class=&#34;margin-toggle&#34;&amp;gt;&amp;amp;#8853;&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; id=&#34;mn-demo&#34; class=&#34;margin-toggle&#34;/&amp;gt;
+&amp;lt;span class=&#34;marginnote&#34;&amp;gt;
+This is a margin note. Notice there isn’t a number preceding the note.
+&amp;lt;/span&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Figures in the margin are created as margin notes, as demonstrated in the next section.&lt;/p&gt;
+
+&lt;h2 id=&#34;figures&#34;&gt;Figures&lt;/h2&gt;
+
+&lt;p&gt;Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.&lt;/p&gt;
+
+&lt;p&gt;Figures should try to use the &lt;code&gt;figure&lt;/code&gt; element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;label for=&#34;mn-exports-imports&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&#34;checkbox&#34; id=&#34;mn-exports-imports&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;marginnote&#34;&gt;From Edward Tufte, &lt;em&gt;Visual Display of Quantitative Information&lt;/em&gt;, page 92.&lt;/span&gt;
+&lt;img src=&#34;https://alanorth.github.io/hugo-theme-tufte-css/hugo-theme-tufte-css/img/exports-imports.png&#34; alt=&#34;Exports and Imports to and from Denmark &amp; Norway from 1700 to 1780&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;label for=&#34;mn-figure-1&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;&lt;input type=&#34;checkbox&#34; id=&#34;mn-figure-1&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;marginnote&#34;&gt;&lt;img src=&#34;https://alanorth.github.io/hugo-theme-tufte-css/hugo-theme-tufte-css/img/rhino.png&#34; alt=&#34;Image of a Rhinoceros&#34;/&gt;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” &lt;em&gt;Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice&lt;/em&gt; (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s &lt;em&gt;Visual Explanations&lt;/em&gt;.&lt;/span&gt; But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a &lt;code&gt;p&lt;/code&gt; tag, as seen to the right of this paragraph.&lt;/p&gt;
+
+&lt;p&gt;If you need a full-width figure, give it the &lt;code&gt;fullwidth&lt;/code&gt; class. Make sure that’s inside an &lt;code&gt;article&lt;/code&gt;, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From &lt;em&gt;Beautiful Evidence&lt;/em&gt;, page 122-124.&lt;/p&gt;
+
+&lt;figure class=&#34;fullwidth&#34;&gt;
+&lt;img src=&#34;https://alanorth.github.io/hugo-theme-tufte-css/hugo-theme-tufte-css/img/napoleons-march.png&#34; alt=&#34;Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;Technical jargon, programming language terms, and code samples are denoted with the &lt;code&gt;code&lt;/code&gt; class, as I’ve been using in this document to denote HTML. Code needs to be monospace for formatting purposes and to aid in code analysis, but it must maintain its readability. To those ends, Tufte CSS follows GitHub’s font selection, which shifts gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.&lt;/p&gt;
+
+&lt;p&gt;Extended code examples should use a &lt;code&gt;pre&lt;/code&gt; tag with class &lt;code&gt;code&lt;/code&gt;. This adds control over indentation and overflow as well:&lt;/p&gt;
+
+&lt;pre class=&#34;code&#34;&gt;;; Some code examples in Clojure. This is a comment.
+
+;; applying a function to every item in the collection
+(map tufte-css blog-posts)
+;;;; if unfamiliar, see http://www.lispcast.com/annotated-map
+
+;; side-effecty loop (unformatted, causing text overflow) - from https://clojuredocs.org/clojure.core/doseq
+(doseq [[[a b] [c d]] (map list (sorted-map :1 1 :2 2) (sorted-map :3 3 :4 4))] (prn (* b d)))
+
+;; that same side-effecty loop, formatted
+(doseq [[[a b] [c d]] (map list
+(sorted-map :1 1 :2 2)
+(sorted-map :3 3 :4 4))]
+(prn (* b d)))
+
+;; If this proselytizing has worked, check out:
+;; http://howistart.org/posts/clojure/1&lt;/pre&gt;
+
+&lt;h2 id=&#34;imagequilts&#34;&gt;ImageQuilts&lt;/h2&gt;
+
+&lt;p&gt;Tufte CSS provides support for Edward Tufte and Adam Schwartz’s &lt;a href=&#34;http://imagequilts.com/&#34;&gt;ImageQuilts&lt;/a&gt;. See the &lt;a href=&#34;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk&#34;&gt;ET forum announcement thread&lt;/a&gt; for more on quilts. Some have ragged edges, others straight. Include these images just as you would any other &lt;code&gt;figure&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:&lt;/p&gt;
+
+&lt;figure class=&#34;fullwidth&#34;&gt;&lt;img src=&#34;https://alanorth.github.io/hugo-theme-tufte-css/hugo-theme-tufte-css/img/imagequilt-chinese-calligraphy.png&#34; alt=&#34;Image of Chinese Calligraphy&#34;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&#34;https://alanorth.github.io/hugo-theme-tufte-css/hugo-theme-tufte-css/img/imagequilt-animal-sounds.png&#34; alt=&#34;Image of animal sounds&#34;/&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;epilogue&#34;&gt;Epilogue&lt;/h2&gt;
+
+&lt;p&gt;Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
