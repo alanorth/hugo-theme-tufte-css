@@ -21,7 +21,9 @@ Finally, a reminder about the goal of this project. The web is not print. Webpag
 ## Getting Started
 To use Tufte CSS, copy `tufte.css` and the `et-book` directory of font files to your project directory, then add the following to your HTML document’s `head` block:
 
-<pre>&lt;link rel="stylesheet" href="tufte.css"/&gt;</pre>
+```
+<link rel="stylesheet" href="tufte.css"/>
+```
 
 Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.
 
@@ -41,7 +43,7 @@ Tufte CSS uses `h1` for the document title, `p` with class `subtitle` for the do
 
 As a bonus, this excerpt regarding the use of headings provides an example of block quotes. In Tufte CSS they are just lightly styled, semantically correct HTML using `blockquote` and `footer` elements. See page 20 of <a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> for an example in print.
 
-<span class="newthought">In his later books<label for="sn-in-his-later-books" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-in-his-later-books" class="margin-toggle"/><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be">_Beautiful Evidence_</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class `newthought`, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through `&lt;section&gt;` tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the `newthought` technique. Pick one approach and stick to it.
+<span class="newthought">In his later books<label for="sn-in-his-later-books" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-in-his-later-books" class="margin-toggle"/><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be">_Beautiful Evidence_</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class `newthought`, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through `<section>` tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the `newthought` technique. Pick one approach and stick to it.
 
 ### Text
 Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. Tufte CSS uses `#fffff8` and `#111111` because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. We stick to the greyscale for text, reserving color for specific, careful use in figures and images.
@@ -165,3 +167,33 @@ Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained
 
 ## Epilogue
 Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.
+
+## Testing Markdown Features in Tufte
+Tufte relies on a lot of HTML/CSS for its styling. This works in Markdown as is, but it is laborious to write the level of HTML required to achieve this — I'm testing to see which of these work natively using Hugo's Markdown syntax.
+
+- [x] Blockquotes (use a `>` on a new line, generally works)
+- [ ] Code blocks (the long-form Markdown code syntax generates a `<pre><code>` but Tufte CSS expects `<pre class="code">`)
+- [x] Epigraphs (generally work, with manual italicization using Markdown `_`, though for search engines you might want to retain `<cite>` tags if that is important)
+- [ ] Sidenotes
+
+Here is a Markdown equivalent of `<blockquote>` with footer citation using `<footer>`:
+
+> [It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of _sentences_ which then cumulate sequentially into _paragraphs_ rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
+> <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, ‘Book design: advice and examples’ thread</a></footer>
+
+Markdown's long-form syntax for multi-line code generates a `<pre><code>` but Tufte CSS expects `<pre class="code">`)
+
+```
+<link rel="stylesheet" href="tufte.css"/>
+```
+
+Epigraphs generally work, though you have to add italicization via Markdown's `_` rather than relying on Tufte's CSS classes:
+
+> _The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts._
+> <footer>George Orwell, “Politics and the English Language”</footer>
+
+> _For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled._
+> <footer>Richard P. Feynman, _“What Do You Care What Other People Think?”_</footer>
+
+> _I do not paint things, I paint only the differences between things._
+> <footer>Henri Matisse, _Henri Matisse Dessins: thèmes et variations_ (Paris, 1943), 37</footer>
