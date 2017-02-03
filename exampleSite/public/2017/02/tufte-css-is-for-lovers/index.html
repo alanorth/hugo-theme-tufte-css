@@ -14,6 +14,7 @@
 
     <link href="https://alanorth.github.io/hugo-theme-tufte-css/css/tufte.css" rel="stylesheet">
     <link href="https://alanorth.github.io/hugo-theme-tufte-css/css/latex.css" rel="stylesheet">
+    <link href="https://alanorth.github.io/hugo-theme-tufte-css/css/style.css" rel="stylesheet">
 
     
   </head>
@@ -54,7 +55,8 @@
 
 <p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to your project directory, then add the following to your HTML document’s <code>head</code> block:</p>
 
-<pre>&lt;link rel="stylesheet" href="tufte.css"/&gt;</pre>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;tufte.css&quot;/&gt;
+</code></pre>
 
 <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
 
@@ -75,7 +77,7 @@
 
 <p>As a bonus, this excerpt regarding the use of headings provides an example of block quotes. In Tufte CSS they are just lightly styled, semantically correct HTML using <code>blockquote</code> and <code>footer</code> elements. See page 20 of <a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> for an example in print.</p>
 
-<p><span class="newthought">In his later books<label for="sn-in-his-later-books" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-in-his-later-books" class="margin-toggle"/><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be"><em>Beautiful Evidence</em></a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class <code>newthought</code>, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through <code>&amp;lt;section&amp;gt;</code> tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the <code>newthought</code> technique. Pick one approach and stick to it.</p>
+<p><span class="newthought">In his later books<label for="sn-in-his-later-books" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-in-his-later-books" class="margin-toggle"/><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be"><em>Beautiful Evidence</em></a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class <code>newthought</code>, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through <code>&lt;section&gt;</code> tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the <code>newthought</code> technique. Pick one approach and stick to it.</p>
 
 <h3 id="text">Text</h3>
 
@@ -207,7 +209,43 @@ This is a margin note. Notice there isn’t a number preceding the note.
 
 <p>Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.</p>
 
-  <section>
+<h2 id="testing-markdown-features-in-tufte">Testing Markdown Features in Tufte</h2>
+
+<p>Tufte relies on a lot of HTML/CSS for its styling. This works in Markdown as is, but it is laborious to write the level of HTML required to achieve this — I&rsquo;m testing to see which of these work natively using Hugo&rsquo;s Markdown syntax.</p>
+
+<ul class="task-list">
+<li><input type="checkbox" checked disabled class="task-list-item"> Blockquotes (use a <code>&gt;</code> on a new line, generally works)</li>
+<li><input type="checkbox" disabled class="task-list-item"> Code blocks (the long-form Markdown code syntax generates a <code>&lt;pre&gt;&lt;code&gt;</code> but Tufte CSS expects <code>&lt;pre class=&quot;code&quot;&gt;</code>)</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> Epigraphs (generally work, with manual italicization using Markdown <code>_</code>, though for search engines you might want to retain <code>&lt;cite&gt;</code> tags if that is important)</li>
+<li><input type="checkbox" disabled class="task-list-item"> Sidenotes</li>
+</ul>
+
+<p>Here is a Markdown equivalent of <code>&lt;blockquote&gt;</code> with footer citation using <code>&lt;footer&gt;</code>:</p>
+
+<blockquote>
+<p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em> rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
+<footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, ‘Book design: advice and examples’ thread</a></footer></p>
+</blockquote>
+
+<p>Markdown&rsquo;s long-form syntax for multi-line code generates a <code>&lt;pre&gt;&lt;code&gt;</code> but Tufte CSS expects <code>&lt;pre class=&quot;code&quot;&gt;</code>)</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;tufte.css&quot;/&gt;
+</code></pre>
+
+<p>Epigraphs generally work, though you have to add italicization via Markdown&rsquo;s <code>_</code> rather than relying on Tufte&rsquo;s CSS classes:</p>
+
+<blockquote>
+<p><em>The English language &hellip; becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.</em>
+<footer>George Orwell, “Politics and the English Language”</footer></p>
+
+<p><em>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</em>
+<footer>Richard P. Feynman, <em>“What Do You Care What Other People Think?”</em></footer></p>
+
+<p><em>I do not paint things, I paint only the differences between things.</em>
+<footer>Henri Matisse, <em>Henri Matisse Dessins: thèmes et variations</em> (Paris, 1943), 37</footer></p>
+</blockquote>
+
+  </section>
 </article>
 
 
