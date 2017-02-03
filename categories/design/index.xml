@@ -28,7 +28,8 @@
 
 &lt;p&gt;To use Tufte CSS, copy &lt;code&gt;tufte.css&lt;/code&gt; and the &lt;code&gt;et-book&lt;/code&gt; directory of font files to your project directory, then add the following to your HTML document’s &lt;code&gt;head&lt;/code&gt; block:&lt;/p&gt;
 
-&lt;pre&gt;&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;tufte.css&#34;/&amp;gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;tufte.css&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.&lt;/p&gt;
 
@@ -49,7 +50,7 @@
 
 &lt;p&gt;As a bonus, this excerpt regarding the use of headings provides an example of block quotes. In Tufte CSS they are just lightly styled, semantically correct HTML using &lt;code&gt;blockquote&lt;/code&gt; and &lt;code&gt;footer&lt;/code&gt; elements. See page 20 of &lt;a href=&#34;https://www.edwardtufte.com/tufte/books_vdqi&#34;&gt;The Visual Display of Quantitative Information&lt;/a&gt; for an example in print.&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;In his later books&lt;label for=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;&lt;/label&gt;&lt;/span&gt;&lt;input type=&#34;checkbox&#34; id=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;sidenote&#34;&gt;&lt;a href=&#34;http://www.edwardtufte.com/tufte/books_be&#34;&gt;&lt;em&gt;Beautiful Evidence&lt;/em&gt;&lt;/a&gt;&lt;/span&gt;, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class &lt;code&gt;newthought&lt;/code&gt;, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through &lt;code&gt;&amp;amp;lt;section&amp;amp;gt;&lt;/code&gt; tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the &lt;code&gt;newthought&lt;/code&gt; technique. Pick one approach and stick to it.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;newthought&#34;&gt;In his later books&lt;label for=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;&lt;/label&gt;&lt;/span&gt;&lt;input type=&#34;checkbox&#34; id=&#34;sn-in-his-later-books&#34; class=&#34;margin-toggle&#34;/&gt;&lt;span class=&#34;sidenote&#34;&gt;&lt;a href=&#34;http://www.edwardtufte.com/tufte/books_be&#34;&gt;&lt;em&gt;Beautiful Evidence&lt;/em&gt;&lt;/a&gt;&lt;/span&gt;, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence set in small caps. For this we use a span with the class &lt;code&gt;newthought&lt;/code&gt;, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; tags. Be consistent: though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the &lt;code&gt;newthought&lt;/code&gt; technique. Pick one approach and stick to it.&lt;/p&gt;
 
 &lt;h3 id=&#34;text&#34;&gt;Text&lt;/h3&gt;
 
@@ -180,6 +181,42 @@ This is a margin note. Notice there isn’t a number preceding the note.
 &lt;h2 id=&#34;epilogue&#34;&gt;Epilogue&lt;/h2&gt;
 
 &lt;p&gt;Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.&lt;/p&gt;
+
+&lt;h2 id=&#34;testing-markdown-features-in-tufte&#34;&gt;Testing Markdown Features in Tufte&lt;/h2&gt;
+
+&lt;p&gt;Tufte relies on a lot of HTML/CSS for its styling. This works in Markdown as is, but it is laborious to write the level of HTML required to achieve this — I&amp;rsquo;m testing to see which of these work natively using Hugo&amp;rsquo;s Markdown syntax.&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Blockquotes (use a &lt;code&gt;&amp;gt;&lt;/code&gt; on a new line, generally works)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Code blocks (the long-form Markdown code syntax generates a &lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/code&gt; but Tufte CSS expects &lt;code&gt;&amp;lt;pre class=&amp;quot;code&amp;quot;&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Epigraphs (generally work, with manual italicization using Markdown &lt;code&gt;_&lt;/code&gt;, though for search engines you might want to retain &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt; tags if that is important)&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Sidenotes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is a Markdown equivalent of &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; with footer citation using &lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of &lt;em&gt;sentences&lt;/em&gt; which then cumulate sequentially into &lt;em&gt;paragraphs&lt;/em&gt; rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
+&lt;footer&gt;&lt;a href=&#34;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB&#34;&gt;Edward Tufte, forum post, ‘Book design: advice and examples’ thread&lt;/a&gt;&lt;/footer&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Markdown&amp;rsquo;s long-form syntax for multi-line code generates a &lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&lt;/code&gt; but Tufte CSS expects &lt;code&gt;&amp;lt;pre class=&amp;quot;code&amp;quot;&amp;gt;&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;tufte.css&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Epigraphs generally work, though you have to add italicization via Markdown&amp;rsquo;s &lt;code&gt;_&lt;/code&gt; rather than relying on Tufte&amp;rsquo;s CSS classes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;The English language &amp;hellip; becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.&lt;/em&gt;
+&lt;footer&gt;George Orwell, “Politics and the English Language”&lt;/footer&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.&lt;/em&gt;
+&lt;footer&gt;Richard P. Feynman, &lt;em&gt;“What Do You Care What Other People Think?”&lt;/em&gt;&lt;/footer&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I do not paint things, I paint only the differences between things.&lt;/em&gt;
+&lt;footer&gt;Henri Matisse, &lt;em&gt;Henri Matisse Dessins: thèmes et variations&lt;/em&gt; (Paris, 1943), 37&lt;/footer&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
